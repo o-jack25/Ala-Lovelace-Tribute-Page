@@ -1,0 +1,202 @@
+@media (prefers-reduced-motion: no-preference){
+    html{
+        scroll-behavior: smooth;
+    }
+}
+
+
+
+*{
+    margin: 0; 
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+}
+
+
+.banner{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(https://cdn.wallpapersafari.com/83/98/lbM3Pq.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+    background-color: red;
+    
+
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0; /* Making it 0 so the line under options is hidden */
+    background: rgba(255, 255, 255,0.6);
+    position: absolute;
+    left: 0;
+    bottom: -10px; /*How far down the line is from the text */
+    transition: 0.5s;
+}
+
+/* when hovering over nav bar items */
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    
+    /*transform: translateY(-50%); /* Vertically Centers*/
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    
+}
+
+.content h1{
+    font-size: 70px;
+    margin-top: 20px;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.content p{
+    margin: 20px auto;
+    font-style: bold;
+    line-height: 35px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: white;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1; /*allows for the button to be seen*/
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+button:hover {
+    border: none;
+    background-color: rgba(185, 170, 170,0.4);
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}
+
+.about{
+    text-align: left;
+    margin-top: 100px;
+    padding: 20px 20px;
+    
+}
+.about p{
+    text-align: left;
+    margin-top: 15px 5px;
+    font-size: 18px;
+    padding: 10px 0;
+}
+.divider{
+    border-bottom: 1px solid white;
+    width: 100%;
+}
+.header-container{
+    display: inline-block;
+}
+.image-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.image-container img{
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    max-width: 25%;
+    
+}
+.life{
+    text-align: left;
+    margin-top: 100px;
+    padding: 20px;
+}
+.life p{
+    text-align: left;
+    margin-top: 15px 5px;
+    font-size: 18px;
+}
+
+.accomplishments{
+    text-align: left;
+    margin-top: 100px;
+    padding: 20px 0;
+    
+}
+
+.accomplishments p{
+    text-align: left;
+    margin-top: 15px 5px;
+    font-size: 18px;
+}
+
+.logo-image{
+    filter: invert(1);
+    filter: brightness(175%);
+    width: 80px;
+    height: auto;
+}
